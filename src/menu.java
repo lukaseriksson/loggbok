@@ -1,12 +1,23 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.ArrayList
+import java.util.Scanner
 
 public class menu {
     public menu() {
     }
 
     public static void main(String[] args) {
+        ArrayList<String> test = new ArrayList();
+        Scanner in = new Scanner(System.in);
+        boolean running = true;
+
+        while (running)
+
+            if (input.equals("quit")) {
+            running = false;
+        } else{
+            test.add(input);
+        }
+
         System.out.println("loggbok");
         System.out.println("vad vill du göra i loggboken");
         System.out.println("Menu Options:");
@@ -18,7 +29,6 @@ public class menu {
         System.out.println("6. Exit");
         System.out.print("Please select an option from 1-6\r\n");
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         try {
             int input = Integer.parseInt(br.readLine());
@@ -31,9 +41,7 @@ public class menu {
             } else {
                 System.out.println("You have entered " + input + "\r\n");
             }
-        } catch (IOException ioe) {
-            System.out.println("IO error trying to read your input!\r\n");
-            System.exit(1);
+        }
         }
     }
 }
