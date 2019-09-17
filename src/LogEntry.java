@@ -1,10 +1,17 @@
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * This is a class
+ * Created 2019-09-10
+ *
+ * @author Magnus Silverdal
+ */
 public class LogEntry {
     private Date createdAt;
     private Date updatedAt;
     private String message;
+    // Optional ArrayList<LogEntry> history;
 
     public LogEntry(String message) {
         this.message = message;
@@ -26,13 +33,12 @@ public class LogEntry {
 
     @Override
     public String toString() {
-        return "logEntry{" +
-                "createdAt=" + createdAt +
-                ", updatedAt=" + updatedAt +
-                ", message='" + message + '\'' +
-                '}';
+        return "LogEntry{" + "createdAt=" + createdAt
+                + ", updatedAt=" + updatedAt + ", message='" + message + '\'' + '}';
     }
-    public void update(String newMessage){
+
+    // Optional: add old version to history
+    public void update(String newMessage) {
 
     }
 }
