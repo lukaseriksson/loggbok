@@ -5,7 +5,6 @@ public class LogEntry {
     private Date createdAt;
     private Date updatedAt;
     private String message;
-    // Optional ArrayList&lt;LogEntry&gt; history;
 
     public LogEntry(String message) {
         this.message = message;
@@ -27,12 +26,13 @@ public class LogEntry {
 
     @Override
     public String toString() {
-        return "LogEntry{" + "createdAt=" + createdAt
-                + ", updatedAt=" + updatedAt + ", message='" + message + '\'' + '}';
+        return "logEntry{" +
+                "createdAt=" + createdAt +
+                ", updatedAt=" + updatedAt +
+                ", message='" + message + '\'' +
+                '}';
     }
-
-    // Optional: add old version to history
-    public void update(String newMessage) {
+    public void update(String newMessage){
 
     }
 }
